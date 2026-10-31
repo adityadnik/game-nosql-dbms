@@ -307,7 +307,7 @@ def quest_completion_stats(db: Database) -> dict:
     return result
 
 
-def get_summary(db: Database) -> dict:
+def get_summary_stats(db: Database) -> dict:
     return {
         "total_players":   db.players.count_documents({}),
         "total_skills":    db.skills.count_documents({}),
@@ -315,3 +315,5 @@ def get_summary(db: Database) -> dict:
         "active_quests":   db.progress.count_documents({"type": "quest", "status": "In Progress"}),
         "completed_quests":db.progress.count_documents({"type": "quest", "status": "Completed"}),
     }
+
+get_summary = get_summary_stats
