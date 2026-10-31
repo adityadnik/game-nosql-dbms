@@ -1,0 +1,14 @@
+# SQLite / local DB files
+*.db
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
